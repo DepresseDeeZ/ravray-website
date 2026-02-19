@@ -1,0 +1,114 @@
+/* RAVRAY STATIONERY - Custom Styles
+    Handles glassmorphism, animations, and premium navigation effects.
+*/
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right, #eff6ff, #ffffff);
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 64, 175, 0.1) 0%,
+    rgba(249, 115, 22, 0.1) 100%
+  );
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Premium Navigation Hover Effect */
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #1e40af; /* brand-blue */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #1e40af;
+}
+
+/* FIX: Card Heights & Visual Breaking */
+.equal-height-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f8fafc; /* slate-50 */
+  border: 1px solid #f1f5f9; /* slate-100 */
+  border-radius: 2rem;
+  padding: 2rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05);
+}
+
+/* This pushes the user info to the bottom of the card */
+.review-content {
+  flex-grow: 1;
+}
+
+/* Service Card Interaction */
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Custom Scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e40af;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}

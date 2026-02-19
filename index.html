@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ravray Stationery & Xerox | ICB FLORA, Gota, Ahmedabad</title>
+    <meta
+      name="description"
+      content="Ravray Stationery & Xerox in Gota, Ahmedabad. Your premium destination for School Essentials, Unique Gifts, Kids Toys, and High-Speed Printing Services."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: "#1E40AF",
+                orange: "#F97316",
+                yellow: "#FACC15",
+                dark: "#0F172A",
+              },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Glassmorphism Effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Hero Background Gradient */
+      .hero-gradient {
+        background: radial-gradient(circle at top right, #eff6ff, #ffffff);
+      }
+
+      /* Nav Link Animation */
+      .nav-link {
+        position: relative;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #1e40af;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-link:hover {
+        color: #1e40af;
+      }
+
+      /* Card Alignment Logic */
+      .review-card,
+      .service-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-content-fill {
+        flex-grow: 1;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animated Blobs */
+      .blob {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(
+          135deg,
+          rgba(30, 64, 175, 0.1) 0%,
+          rgba(249, 115, 22, 0.1) 100%
+        );
+        filter: blur(80px);
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      /* Floating WhatsApp Animation */
+      @keyframes pulse-green {
+        0% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(34, 197, 94, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+        }
+      }
+      .whatsapp-float {
+        animation: pulse-green 2s infinite;
+      }
+    </style>
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ravray Stationery & Xerox",
+        "image": "https://images.unsplash.com/photo-1583327171626-96673e6f6600",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ICB FLORA, 60, Gota",
+          "addressLocality": "Ahmedabad",
+          "addressRegion": "Gujarat",
+          "postalCode": "382481",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 23.1016,
+          "longitude": 72.5405
+        },
+        "url": "https://wa.me/918160825854",
+        "telephone": "+918160825854",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "09:00",
+            "closes": "23:30"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.6",
+          "reviewCount": "129"
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans text-brand-dark bg-white overflow-x-hidden">
+    <!-- Header Navigation -->
+    <header
+      class="fixed w-full z-50 transition-all duration-300 glass"
+      id="main-header"
+    >
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Brand Logo -->
+        <div
+          class="flex items-center gap-2 cursor-pointer"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+          <div class="bg-brand-blue p-2 rounded-lg text-white">
+            <i data-lucide="pen-tool" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span
+              class="text-xl font-bold tracking-tight text-brand-blue block leading-none"
+              >RAVRAY</span
+            >
+            <span
+              class="text-[10px] uppercase tracking-widest font-semibold text-brand-orange"
+              >Stationery & Xerox</span
+            >
+          </div>
+        </div>
+
+        <!-- Desktop Menu (Reordered) -->
+        <div class="hidden md:flex items-center gap-8 font-medium">
+          <a href="#home" class="nav-link text-brand-dark">Home</a>
+          <a href="#about" class="nav-link text-brand-dark">About Us</a>
+          <a href="#services" class="nav-link text-brand-dark">Services</a>
+          <a href="#reviews" class="nav-link text-brand-dark">Reviews</a>
+          <a href="#location" class="nav-link text-brand-dark">Location</a>
+          <a
+            href="https://wa.me/918160825854"
+            target="_blank"
+            class="bg-brand-blue text-white px-5 py-2.5 rounded-full flex items-center gap-2 hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+          >
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </a>
+        </div>
+
+        <button class="md:hidden text-brand-dark" id="menu-btn">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-[60] bg-white hidden flex-col items-center justify-center gap-8 text-2xl font-bold text-brand-dark"
+    >
+      <button class="absolute top-6 right-6" id="close-menu">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About Us</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#reviews" class="mobile-link">Reviews</a>
+      <a href="#location" class="mobile-link">Location</a>
+      <a href="tel:08160825854" class="text-brand-blue flex items-center gap-2"
+        ><i data-lucide="phone" class="w-6 h-6"></i> Call Now</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen pt-32 pb-20 flex items-center hero-gradient"
+    >
+      <div class="blob top-0 right-0"></div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2 space-y-8" data-aos="fade-up">
+            <div
+              class="inline-flex items-center gap-2 bg-brand-orange/10 text-brand-orange px-4 py-2 rounded-full font-bold text-sm"
+            >
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i> Rated 4.6
+              on Google Maps
+            </div>
+            <h1
+              class="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight text-brand-dark"
+            >
+              Everything You Need for
+              <span class="text-brand-blue">School</span>, Office &
+              <span class="text-brand-orange">Fun</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-lg leading-relaxed">
+              Stationery • Gifts • Toys • Xerox • Printing. Your one-stop shop
+              in Gota for families, students, and professionals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:08160825854"
+                class="bg-brand-blue text-white text-lg px-8 py-4 rounded-2xl flex items-center justify-center gap-3 hover:shadow-xl transition-all transform hover:-translate-y-1"
+              >
+                <i data-lucide="phone-call" class="w-5 h-5"></i> Call Now
+              </a>
+              <a
+                href="#services"
+                class="bg-white text-brand-blue border-2 border-brand-blue text-lg px-8 py-4 rounded-2xl flex items-center justify-center gap-3 hover:bg-blue-50 transition-all"
+              >
+                Explore Services
+              </a>
+            </div>
+          </div>
+
+          <!-- Asset Grid -->
+          <div class="lg:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-left">
+            <div class="space-y-4 pt-12">
+              <img
+                src="assets/gifts.jpg"
+                alt="Gifts"
+                class="w-full h-64 object-cover rounded-[2rem] shadow-xl"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400'
+                "
+              />
+              <img
+                src="assets/stationery.jpg"
+                alt="Stationery"
+                class="w-full h-48 object-cover rounded-[2rem] shadow-xl"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1568234929051-9dec47ea4a5a?w=400'
+                "
+              />
+            </div>
+            <div class="space-y-4">
+              <img
+                src="assets/toys.jpg"
+                alt="Toys"
+                class="w-full h-48 object-cover rounded-[2rem] shadow-xl"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1558877385-81a1c7e67d52?w=400'
+                "
+              />
+              <img
+                src="assets/printing.jpg"
+                alt="Printing"
+                class="w-full h-64 object-cover rounded-[2rem] shadow-xl"
+                onerror="
+                  this.src =
+                    'https://images.unsplash.com/photo-1544465544-1b71aee9dfa3?w=400'
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 relative" data-aos="fade-right">
+            <div
+              class="absolute -top-10 -left-10 w-40 h-40 bg-brand-yellow rounded-full opacity-20 blur-3xl"
+            ></div>
+            <img
+              src="assets/toys.jpg"
+              alt="About Ravray"
+              class="rounded-[3rem] shadow-2xl relative z-10 w-full h-[500px] object-cover"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1583327171626-96673e6f6600?w=800'
+              "
+            />
+            <div
+              class="absolute -bottom-8 -right-8 bg-brand-blue text-white p-8 rounded-3xl shadow-xl z-20 text-center"
+            >
+              <span class="text-4xl font-bold block">10+</span>
+              <span class="text-xs opacity-80 uppercase tracking-widest"
+                >Years of Excellence</span
+              >
+            </div>
+          </div>
+
+          <div class="lg:w-1/2 space-y-10" data-aos="fade-left">
+            <h2 class="text-4xl font-bold text-brand-dark">
+              Why Local Families Trust Ravray
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed italic">
+              Bringing inspiration to every student and professional in Gota for
+              over a decade.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div
+                class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors"
+              >
+                <div class="p-3 bg-green-100 text-green-600 rounded-xl">
+                  <i data-lucide="clock" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-dark">Open till 11:30 PM</h4>
+                  <p class="text-sm text-gray-500">
+                    Perfect for last-minute school projects.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors"
+              >
+                <div class="p-3 bg-blue-100 text-brand-blue rounded-xl">
+                  <i data-lucide="car" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-dark">Free Parking</h4>
+                  <p class="text-sm text-gray-500">
+                    Ample space for a quick stop-and-shop.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors"
+              >
+                <div class="p-3 bg-purple-100 text-purple-600 rounded-xl">
+                  <i data-lucide="credit-card" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-dark">
+                    All Payments Accepted
+                  </h4>
+                  <p class="text-sm text-gray-500">
+                    Cards, UPI, NFC & GPay supported.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors"
+              >
+                <div class="p-3 bg-red-100 text-red-600 rounded-xl">
+                  <i data-lucide="smile" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-brand-dark">Kids Discounts</h4>
+                  <p class="text-sm text-gray-500">
+                    Special offers for students & families.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4">Our Premium Services</h2>
+          <p class="text-gray-600 text-lg">
+            Everything you need under one roof for school, home, and office.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="service-card group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100"
+            data-aos="fade-up"
+          >
+            <div
+              class="service-icon w-16 h-16 bg-blue-100 text-brand-blue rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i data-lucide="book-open" class="w-8 h-8"></i>
+            </div>
+            <div class="card-content-fill">
+              <h3 class="text-2xl font-bold mb-3 text-brand-dark">
+                Stationery Supplies
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Premium pens, high-quality notebooks, architectural supplies,
+                and office folders.
+              </p>
+            </div>
+            <ul
+              class="space-y-2 text-sm font-semibold text-brand-blue pt-4 border-t border-slate-50 mt-auto"
+            >
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> Branded Pens
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> School Notebooks
+              </li>
+            </ul>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="service-card group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="service-icon w-16 h-16 bg-orange-100 text-brand-orange rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i data-lucide="gift" class="w-8 h-8"></i>
+            </div>
+            <div class="card-content-fill">
+              <h3 class="text-2xl font-bold mb-3 text-brand-dark">
+                Gifts & Toys
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Unique gifts for every occasion and a fun collection of toys for
+                kids.
+              </p>
+            </div>
+            <ul
+              class="space-y-2 text-sm font-semibold text-brand-orange pt-4 border-t border-slate-50 mt-auto"
+            >
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> Birthday Gifts
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> Educational Toys
+              </li>
+            </ul>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="service-card group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl border border-slate-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="service-icon w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i data-lucide="printer" class="w-8 h-8"></i>
+            </div>
+            <div class="card-content-fill">
+              <h3 class="text-2xl font-bold mb-3 text-brand-dark">
+                Xerox & Printing
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                High-speed photocopying, color printing, and document lamination
+                services.
+              </p>
+            </div>
+            <ul
+              class="space-y-2 text-sm font-semibold text-yellow-600 pt-4 border-t border-slate-50 mt-auto"
+            >
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> Bulk Scanning
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4"></i> Color Printouts
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section - EXACTLY 6 REVIEWS -->
+    <section id="reviews" class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-4 text-brand-dark">
+            What Our Customers Say
+          </h2>
+          <div class="flex items-center justify-center gap-2">
+            <div class="flex text-brand-yellow">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i
+              ><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <span class="font-bold text-lg text-brand-dark">4.6/5.0</span>
+            <span class="text-gray-400 font-medium ml-2"
+              >based on 129+ reviews</span
+            >
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Review 1 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "Ravray Stationery gifts & Xerox offers an impressive selection
+                of quality products. The staff is friendly, it’s perfect for all
+                your school and Office stationery, Gifts 🎁, Xerox, Birthday
+                Decoration, etc needs!"
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold"
+              >
+                L
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">
+                  Luckyrajsinh Rajput
+                </p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Local Guide
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "Nice service and best performance every items 💐."
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold"
+              >
+                D
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">Dipak Patel</p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Local Guide
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "Prompt service with reasonable price good gift and stationary
+                products collection"
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-brand-yellow rounded-full flex items-center justify-center text-white font-bold"
+              >
+                K
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">Kalpesh Ahir</p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Local Guide
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 4 -->
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "A Great Place to Complete your Stationary Work In a timely
+                manner and accurately"
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                D
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">Darshan Ratnu</p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Customer
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 5 -->
+          <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "Best shop near me. Highly recommended for daily school needs."
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-slate-300 rounded-full flex items-center justify-center text-white font-bold"
+              >
+                J
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">Jani Rushi</p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Customer
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Review 6 -->
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="review-content">
+              <div class="flex gap-1 mb-4 text-brand-yellow">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i
+                ><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-gray-700 italic leading-relaxed mb-6">
+                "Best ret shop xerox and stationery items. Value for money."
+              </p>
+            </div>
+            <div
+              class="flex items-center gap-3 border-t border-slate-100 pt-4 mt-auto"
+            >
+              <div
+                class="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold"
+              >
+                S
+              </div>
+              <div>
+                <p class="font-bold text-brand-dark text-sm">Samir Shah</p>
+                <p class="text-[10px] uppercase tracking-wider text-gray-500">
+                  Customer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="https://www.google.com/maps/place/Ravray+Stationery+%26+Xerox/@23.1016324,72.5405505,20z/"
+            target="_blank"
+            class="inline-flex items-center gap-2 font-bold text-brand-blue hover:text-brand-orange transition-colors"
+          >
+            View all 129 reviews on Google Maps
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div
+          class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-50"
+        >
+          <div class="lg:w-1/2 p-12 lg:p-20 space-y-8" data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-brand-dark">Find Us in Gota</h2>
+            <p class="text-gray-600 text-lg">
+              We are located at ICB Flora,Ahmedabad. Serving the community since
+              2014.
+            </p>
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <i
+                  data-lucide="map-pin"
+                  class="text-brand-blue w-6 h-6 shrink-0"
+                ></i>
+                <p class="font-medium text-gray-700 italic">
+                  ICB FLORA, 60, Gota, Ahmedabad, Gujarat 382481
+                </p>
+              </div>
+              <div class="flex gap-4">
+                <i
+                  data-lucide="phone"
+                  class="text-brand-blue w-6 h-6 shrink-0"
+                ></i>
+                <a
+                  href="tel:08160825854"
+                  class="font-medium text-gray-700 hover:text-brand-blue"
+                  >081608 25854</a
+                >
+              </div>
+              <div class="flex gap-4">
+                <i
+                  data-lucide="clock"
+                  class="text-brand-blue w-6 h-6 shrink-0"
+                ></i>
+                <div>
+                  <p class="font-medium text-brand-dark leading-tight text-lg">
+                    09:00 AM – 11:30 PM
+                  </p>
+                  <p
+                    class="text-[10px] uppercase font-bold tracking-widest text-brand-orange mt-1"
+                  >
+                    Open Daily
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/Ravray+Stationery+%26+Xerox/@23.1016324,72.5405505,20z/"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-brand-orange text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg transition-all transform hover:scale-105 active:scale-95"
+            >
+              <i data-lucide="navigation" class="w-5 h-5"></i> Get Directions
+            </a>
+          </div>
+          <div class="lg:w-1/2 min-h-[450px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458.72023533486333!2d72.5405505!3d23.1016324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83485083598f%3A0xa370f1122cb7e671!2sRavray%20Stationery%20%26%20Xerox!5e0!3m2!1sen!2sin!4v1740000000000!5m2!1sen!2sin"
+              class="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-1000"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Population Footer -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20"
+        >
+          <!-- Column 1: About -->
+          <div class="space-y-6">
+            <div class="flex items-center gap-2">
+              <div class="bg-brand-blue p-2 rounded-lg text-white">
+                <i data-lucide="pen-tool" class="w-5 h-5"></i>
+              </div>
+              <span class="text-2xl font-bold tracking-tight uppercase"
+                >Ravray</span
+              >
+            </div>
+            <p class="opacity-60 text-sm leading-relaxed">
+              Your premium neighbourhood store for all things creative,
+              educational, and essential in Ahmedabad. We bring quality and
+              convenience to your doorstep.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-blue transition-colors"
+                ><i data-lucide="facebook" class="w-5 h-5"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-orange transition-colors"
+                ><i data-lucide="instagram" class="w-5 h-5"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Column 2: Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-brand-orange">
+              Quick Links
+            </h4>
+            <ul class="space-y-4 text-sm opacity-70">
+              <li>
+                <a href="#home" class="hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="#reviews" class="hover:text-white transition-colors"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a href="#location" class="hover:text-white transition-colors"
+                  >Locate Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Column 3: Services -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-brand-orange">
+              Our Services
+            </h4>
+            <ul class="space-y-4 text-sm opacity-70">
+              <li>Stationery Supplies</li>
+              <li>Gifts & Toy Collection</li>
+              <li>Xerox & Colour Prints</li>
+              <li>Lamination & Scanning</li>
+              <li>School Project Material</li>
+            </ul>
+          </div>
+          <!-- Column 4: Contact -->
+          <div>
+            <h4 class="text-lg font-bold mb-6 text-brand-orange">
+              Contact Details
+            </h4>
+            <div class="space-y-4 text-sm opacity-70">
+              <p class="flex items-start gap-3">
+                <i
+                  data-lucide="map-pin"
+                  class="w-5 h-5 text-white shrink-0"
+                ></i>
+                ICB FLORA, 60, Gota, Ahmedabad, Gujarat 382481
+              </p>
+              <p class="flex items-center gap-3">
+                <i data-lucide="phone" class="w-5 h-5 text-white shrink-0"></i>
+                081608 25854
+              </p>
+              <p class="flex items-center gap-3">
+                <i data-lucide="clock" class="w-5 h-5 text-white shrink-0"></i>
+                Open Daily: 9AM - 11:30PM
+              </p>
+              <p class="flex items-center gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-white shrink-0"></i>
+                hello@ravraygota.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-white/10 text-center text-xs opacity-40"
+        >
+          <p>
+            &copy; 2026 Ravray Stationery & Xerox. Gota, Ahmedabad. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/918160825854"
+      target="_blank"
+      class="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-transform whatsapp-float"
+    >
+      <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      lucide.createIcons();
+      AOS.init({ duration: 800, once: true, easing: "ease-out" });
+
+      const header = document.getElementById("main-header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("py-2", "shadow-xl");
+          header.classList.remove("py-4");
+        } else {
+          header.classList.remove("py-2", "shadow-xl");
+          header.classList.add("py-4");
+        }
+      });
+
+      const menuBtn = document.getElementById("menu-btn");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.onclick = () => {
+        mobileMenu.classList.remove("hidden");
+        mobileMenu.classList.add("flex");
+        document.body.style.overflow = "hidden";
+      };
+      closeMenu.onclick = () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
+        document.body.style.overflow = "";
+      };
+      document
+        .querySelectorAll(".mobile-link")
+        .forEach((link) => (link.onclick = closeMenu.onclick));
+    </script>
+  </body>
+</html>
